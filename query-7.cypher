@@ -1,0 +1,1 @@
+match(a:author) with a limit 2 match(a)<-[:authored]-(p:publication) with p,  a match(a)-[:contributed_to]->(v:venue)  return distinct v.type, a.name, count(p)

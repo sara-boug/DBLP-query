@@ -1,0 +1,1 @@
+match(v:venue) return distinct v.type

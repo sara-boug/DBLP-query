@@ -1,0 +1,1 @@
+match(a:author) with a limit 100 match(a)<-[:authored]-(p:publication) return count(p) as publications, a.name as author  ORDER BY publications  DESC limit 1
